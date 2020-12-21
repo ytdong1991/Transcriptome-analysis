@@ -4,7 +4,7 @@ Use SRAtoolkits v2.10.8   `$ nohup prefetch --option-file SRRID.txt > log.out 2>
 
 
 **Sra to fastq**   
-1. To judge whether the data is of PE or SE: `$ fastq-dump -X 1 --split-spot -Z SRRXXXXX.sra | wc -l`  
+1. To judge whether the data is of PE or SE: `$ fastq-dump -X 1 --split-spot -Z SRRXXXXX.sra |wc -l`  
    8 means pair end, while 4 means single end   
 2. Use fastq-dump to transfer the data type: `$ fastq-dump --split-e --gzip SRRXXXXX.sra`   
    Use multithreading: `$  fastq-dump --split-e --gzip SRRXXXXX.sra -O ./ -t 8`    

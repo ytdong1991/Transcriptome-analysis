@@ -132,7 +132,8 @@ total 4.9G
    --outSAMtype BAM SortedByCoordinate \
    --outFileNamePrefix $result/Os_Star_SRR${i}. \
    --outBAMsortingThreadN 30 \
-   --quantMode TranscriptomeSAM GeneCounts
+   --quantMode TranscriptomeSAM GeneCounts \  
+   --sjdbGTFfile $gff \
    done   
 ```   
 Before running *bash*, check the `ulimit -n`, if too small, change to `ulimit -n 10000`   

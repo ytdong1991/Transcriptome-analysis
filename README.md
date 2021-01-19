@@ -146,7 +146,6 @@ Before running *bash*, check the `ulimit -n`, if too small, change to `ulimit -n
    set -u
    set -o pipefail
 
-   fasta=~/dyt/Osativa_323_v7.0.fa
    gff=~/dyt/Osativa_323_v7.0.gene_exons.gff3
    featureCounts=~/dyt/software/subread-2.0.1-Linux-x86_64/bin/featureCounts
 
@@ -157,5 +156,6 @@ Before running *bash*, check the `ulimit -n`, if too small, change to `ulimit -n
 
    ```   
    Will get two files: one is the counts file, the other one is the summary of alignment.   
-    
+   `# "-O" ( reads (or fragments if -p is specifed) will be allowed to be assigned to more than one matched meta-feature (or feature if -f is specifed) https://www.biostars.org/p/321379/ don't use`   
+   
  **DESeq2 for DEG statistical analysis**

@@ -153,11 +153,9 @@ Before running *bash*, check the `ulimit -n`, if too small, change to `ulimit -n
    Genecounts=~/dyt/ricePi/03new
    results=~/dyt/ricePi/04featurecounts
 
-   $featureCounts -T 16 -p -t exon -g ID -a $gff -o $results/counts.txt *Aligned.sortedByCoord.out.bam
+   $featureCounts -T 16 -p -C -t exon -g gene_id -a $gff -o $results/counts.txt *Aligned.sortedByCoord.out.bam
 
-   #or use gene as the feature
-   $featureCounts -T 16 -p -t gene -g ID -a $gff -o $results/genes.txt *Aligned.sortedByCoord.out.bam   
- ```   
+   ```   
    Will get two files: one is the counts file, the other one is the summary of alignment.   
     
  **DESeq2 for DEG statistical analysis**
